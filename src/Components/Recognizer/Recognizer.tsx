@@ -33,10 +33,12 @@ const Recognizer = () => {
     return (
         <div className={s.container}>
             <div className={s.recognizer}>
-                <p className={s.mic}>Микрофон: {speech.listening ? 'Включен' : 'Выключен'}</p>
-                <button className={s.button} onClick={startHandler}>Старт</button>
-                <button className={s.button} onClick={stopHandler}>Стоп</button>
-                <button className={s.button} onClick={resetHandler}>Обновить</button>
+                <p className={s.mic}>Микрофон: {speech.listening ? 'включен' : 'выключен'}</p>
+                <div className={s.buttons}>
+                    <button className={s.button} onClick={startHandler}>Старт</button>
+                    <button className={s.button} onClick={stopHandler}>Стоп</button>
+                    <button className={s.button} onClick={resetHandler}>Обновить</button>
+                </div>
                 <p className={s.speech}>{addNumberToWord(speech.transcript)}</p>
             </div>
         </div>
